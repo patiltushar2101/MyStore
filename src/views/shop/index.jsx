@@ -17,7 +17,7 @@ const Shop = () => {
   }), shallowEqual);
 
   return (
-    <main className="content">
+    <main className="content" style={{ paddingTop: "120px" }}>
       <section className="product-list-wrapper">
         <AppliedFilters filteredProductsCount={store.filteredProducts.length} />
         <ProductList {...store}>
