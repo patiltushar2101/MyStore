@@ -44,7 +44,7 @@ const ShippingForm = () => {
           </div>
         </div>
         <div className="checkout-fieldset">
-          <Field name="isInternational">
+          <Field name="isFastl">
             {({ field, form, meta }) => (
               <div className="checkout-field">
                 {meta.touched && meta.error ? (
@@ -70,10 +70,10 @@ const ShippingForm = () => {
                   />
                   <label className="d-flex w-100" htmlFor={field.name}>
                     <h5 className="d-flex-grow-1 margin-0">
-                      &nbsp; International Shipping &nbsp;
-                      <span className="text-subtle">7-14 days</span>
+                      &nbsp; Fast Shipping &nbsp;
+                      <span className="text-subtle">1-2 days</span>
                     </h5>
-                    <h4 className="margin-0">$50.00</h4>
+                    <h4 className="margin-0">₹49.00 Extra*</h4>
                   </label>
                 </div>
               </div>

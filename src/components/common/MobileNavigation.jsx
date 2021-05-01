@@ -7,6 +7,8 @@ import UserNav from 'views/account/components/UserAvatar';
 import Badge from './Badge';
 import FiltersToggle from './FiltersToggle';
 import SearchBar from './SearchBar';
+import { NavLink } from 'react-router-dom';
+import * as ROUTE from 'constants/routes';
 
 const Navigation = (props) => {
   const {
@@ -65,7 +67,15 @@ const Navigation = (props) => {
         </ul>
       </div>
       <div className="mobile-navigation-sec">
-        <SearchBar />
+        {/* <SearchBar /> */}
+
+        <ul className="navigation-menu-main">
+          <li><NavLink activeClassName="navigation-menu-active" exact to={ROUTE.HOME}>Home</NavLink></li>
+          <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.SHOP}>Shop</NavLink></li>
+          <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.FEATURED_PRODUCTS}>Featured</NavLink></li>
+          <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.RECOMMENDED_PRODUCTS}>Recommended</NavLink></li>
+        </ul>
+
         <FiltersToggle>
           <button className="button-link button-small" type="button">
             <i className="fa fa-filter" />

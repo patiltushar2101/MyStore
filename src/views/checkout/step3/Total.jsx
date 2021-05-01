@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { setPaymentDetails } from 'redux/actions/checkoutActions';
 
-const Total = ({ isInternational, subtotal }) => {
+const Total = ({ isFastl, subtotal }) => {
   const { values, submitForm } = useFormikContext();
   const history = useHistory();
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const Total = ({ isInternational, subtotal }) => {
       <div className="basket-total text-right">
         <p className="basket-total-title">Total:</p>
         <h2 className="basket-total-amount">
-          {displayMoney(subtotal + (isInternational ? 50 : 0))}
+          {displayMoney(subtotal + (isFastl ? 49 : 0))}
         </h2>
       </div>
       <br />
@@ -56,7 +56,7 @@ const Total = ({ isInternational, subtotal }) => {
 };
 
 Total.propTypes = {
-  isInternational: PropType.bool.isRequired,
+  isFastl: PropType.bool.isRequired,
   subtotal: PropType.number.isRequired
 };
 

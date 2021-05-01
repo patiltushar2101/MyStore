@@ -67,7 +67,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
             <CreditPayment />
             <PayPalPayment />
             <Total
-              isInternational={shipping.isInternational}
+              isFastl={shipping.isFastl}
               subtotal={subtotal}
             />
           </Form>
@@ -80,7 +80,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
 Payment.propTypes = {
   shipping: PropType.shape({
     isDone: PropType.bool,
-    isInternational: PropType.bool
+    isFastl: PropType.bool
   }).isRequired,
   payment: PropType.shape({
     name: PropType.string,

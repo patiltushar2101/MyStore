@@ -34,7 +34,7 @@ const FormSchema = Yup.object().shape({
       value: Yup.string().required('Mobile number is required')
     })
     .required('Mobile number is required.'),
-  isInternational: Yup.boolean(),
+  isFastl: Yup.boolean(),
   isDone: Yup.boolean()
 });
 
@@ -49,7 +49,7 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
     email: shipping.email || profile.email || '',
     address: shipping.address || profile.address || '',
     mobile: shipping.mobile || profile.mobile || {},
-    isInternational: shipping.isInternational || false,
+    isFastl: shipping.isFastl || false,
     isDone: shipping.isDone || false
   };
 
@@ -59,7 +59,7 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
       email: form.email,
       address: form.address,
       mobile: form.mobile,
-      isInternational: form.isInternational,
+      isFastl: form.isFastl,
       isDone: true
     }));
     history.push(CHECKOUT_STEP_3);
@@ -126,7 +126,7 @@ ShippingDetails.propTypes = {
     email: PropType.string,
     address: PropType.string,
     mobile: PropType.object,
-    isInternational: PropType.bool,
+    isFastl: PropType.bool,
     isDone: PropType.bool
   }).isRequired
 };
