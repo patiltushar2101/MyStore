@@ -8,6 +8,7 @@ import Badge from './Badge';
 import FiltersToggle from './FiltersToggle';
 import SearchBar from './SearchBar';
 import { NavLink } from 'react-router-dom';
+import { FilterOutlined, ShoppingOutlined } from '@ant-design/icons';
 import * as ROUTE from 'constants/routes';
 
 const Navigation = (props) => {
@@ -39,7 +40,7 @@ const Navigation = (props) => {
             >
 
               <Badge count={basketLength}>
-                <i className="fa fa-shopping-bag" style={{ fontSize: '2rem' }} />
+                <ShoppingOutlined style={{ fontSize: '2.4rem' }} />
               </Badge>
             </button>
           )}
@@ -73,14 +74,8 @@ const Navigation = (props) => {
           <li><NavLink activeClassName="navigation-menu-active" exact to={ROUTE.HOME}>Home</NavLink></li>
           <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.SHOP}>Shop</NavLink></li>
           <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.FEATURED_PRODUCTS}>Featured</NavLink></li>
-          <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.RECOMMENDED_PRODUCTS}>Recommended</NavLink></li>
+          <li><NavLink activeClassName="navigation-menu-active" to={ROUTE.RECOMMENDED_PRODUCTS}>Recomm..</NavLink></li>
         </ul>
-
-        <FiltersToggle>
-          <button className="button-link button-small" type="button">
-            <i className="fa fa-filter" />
-          </button>
-        </FiltersToggle>
       </div>
     </nav>
   );
